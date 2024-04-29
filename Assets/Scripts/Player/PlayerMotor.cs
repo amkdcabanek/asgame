@@ -10,6 +10,8 @@ public class PlayerMotor : MonoBehaviour
     public float gravity= -9.8f;
     public float speed = 5f;
     public float jumpHeight = 3f;
+    private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
+    private Vector3 playerScale = new Vector3(1, 1f, 1);
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,18 @@ public class PlayerMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = controller.isGrounded; 
+        isGrounded = controller.isGrounded;
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            transform.localScale = crouchScale;
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            transform.localScale = playerScale;
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+        }
     }
     public void ProcessMove(Vector2 input )
     {

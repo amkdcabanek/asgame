@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     private PlayerInput playerInput;
-    private PlayerInput.ONFOOTActions onFoot;
+    public PlayerInput.OnFootActions onFoot;
     private PlayerMotor motor;
     private PlayerLook look;
     private Vector2 movementInput;
@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour
     void Awake()
     {
         playerInput = new PlayerInput();
-        onFoot = playerInput.ONFOOT;
+        onFoot = playerInput.OnFoot;
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
         onFoot.Jump.performed += ctx => motor.Jump();
