@@ -1,0 +1,4 @@
+repository "asgame@rzygisrani3@cloud"
+  path "/"
+    br "/main"
+    co "/main"
