@@ -1,7 +1,19 @@
-this is a simple project ive been working on 
+# ASGame
 
-its a FPS made in unity for fun
+ASGame is an FPS (First-Person Shooter) project developed in Unity. This project is a work-in-progress and primarily serves as a fun exploration of game development using C#.
 
-unfortunatelly full folder with game files is too big to commit so i only uploaded c# code
+## Project Overview
 
-it is yet to be finished!!
+- **Language**: C#
+- **Engine**: Unity
+- **Status**: In development
+
+## Features
+
+- First-person shooter mechanics
+- Basic functionalities implemented in C#
+
+## Note
+
+Due to the large size of the full game folder, only the C# code has been committed to this repository. The project is still under active development, and more features will be added in the future.
+All C# code is located in the **Assets** folder.
